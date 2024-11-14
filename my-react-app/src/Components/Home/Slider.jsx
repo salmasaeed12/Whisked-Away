@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { Carousel } from 'react-bootstrap'
-
-import sliderimg from "../../images/slider1.png";
+import sliderImg from "../../images/slider1.png";
 import slider4 from "../../images/slider4.png";
 import prod3 from "../../images/prod3.png";
 import prod4 from "../../images/prod4.png";
 
-const Silder = () => {
+const Slider = () => {
     const [index, setIndex] = useState(0)
     const handleSelect = (selectedIndex) => {
         setIndex(selectedIndex)
@@ -23,8 +22,8 @@ const Silder = () => {
                         alt="First slide"
                     />
                     <div className="">
-                        <h3 className="slider-title">هناك خصم كبير</h3>
-                        <p className="slider-text">خصم يصل ٥٠٪ عند شرائك</p>
+                        <h3 className="slider-title">There is a big discount</h3>
+                        <p className="slider-text">Discount up to 50% on your purchase</p>
                     </div>
                 </div>
             </Carousel.Item>
@@ -33,12 +32,12 @@ const Silder = () => {
                     <img
                         style={{ height: "296px", width: "313.53px" }}
                         className=""
-                        src={sliderimg}
+                        src={sliderImg}
                         alt="First slide"
                     />
                     <div className="">
-                        <h3 className="slider-title">هناك خصم كبير</h3>
-                        <p className="slider-text">خصم يصل ٥٠٪ عند شرائك</p>
+                        <h3 className="slider-title">There is a big discount</h3>
+                        <p className="slider-text">Discount up to 50% on your purchase</p>
                     </div>
                 </div>
             </Carousel.Item>
@@ -52,8 +51,8 @@ const Silder = () => {
                         alt="First slide"
                     />
                     <div className="">
-                        <h3 className="slider-title">هناك خصم كبير</h3>
-                        <p className="slider-text">خصم يصل ٥٠٪ عند شرائك</p>
+                        <h3 className="slider-title">There is a big discount</h3>
+                        <p className="slider-text">Discount up to 50% on your purchase</p>
                     </div>
                 </div>
             </Carousel.Item>
@@ -67,8 +66,8 @@ const Silder = () => {
                         alt="First slide"
                     />
                     <div className="">
-                        <h3 className="slider-title">هناك خصم كبير</h3>
-                        <p className="slider-text">خصم يصل ٥٠٪ عند شرائك</p>
+                        <h3 className="slider-title">There is a big discount</h3>
+                        <p className="slider-text">Discount up to 50% on your purchase</p>
                     </div>
                 </div>
             </Carousel.Item>
@@ -76,5 +75,5 @@ const Silder = () => {
     )
 }
 
-export default Silder;
+export default Slider;
 

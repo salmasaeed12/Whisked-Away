@@ -9,14 +9,14 @@ const AdminAddBrand = () => {
     return (
         <div>
             <Row className="justify-content-start ">
-                <div className="admin-content-text pb-4">اضف ماركه جديده</div>
+                <div className="admin-content-text pb-4">Add New Brand</div>
                 <Col sm="8">
-                    <div className="text-form pb-2">صوره الماركه</div>
+                    <div className="text-form pb-2">Brand Image</div>
                     <div>
-                        <label for="upload-photo">
+                        <label htmlFor="upload-photo">
                             <img
                                 src={img}
-                                alt="fzx"
+                                alt="brand"
                                 height="100px"
                                 width="120px"
                                 style={{ cursor: "pointer" }}
@@ -33,19 +33,19 @@ const AdminAddBrand = () => {
                         type="text"
                         value={name}
                         className="input-form d-block mt-3 px-3"
-                        placeholder="اسم الماركه"
+                        placeholder="Brand Name"
                         onChange={onChangeName}
                     />
                 </Col>
             </Row>
             <Row>
                 <Col sm="8" className="d-flex justify-content-end ">
-                    <button onClick={handleSubmit} className="btn-save d-inline mt-2 ">حفظ التعديلات</button>
+                    <button onClick={handleSubmit} className="btn-save d-inline mt-2 ">Save Changes</button>
                 </Col>
             </Row>
 
             {
-                isPress ? loading ? <Spinner animation="border" variant="primary" /> : <h4>تم الانتهاء</h4> : null
+                isPress ? loading ? <Spinner animation="border" variant="primary" /> : <h4>Completed</h4> : null
             }
             <ToastContainer />
         </div>

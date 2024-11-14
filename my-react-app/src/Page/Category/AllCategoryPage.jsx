@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import CategoryContainer from '../../Components/Category/CategoryContainer'
-import Pagination from '../../Components/Uitily/Pagination'
+import Pagination from '../../Components/Utility/Pagination'
 import AllCategoryHook from '../../hook/category/all-category-page-hook'
 const AllCategoryPage = () => {
 

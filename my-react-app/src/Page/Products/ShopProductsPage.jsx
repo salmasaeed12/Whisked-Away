@@ -2,9 +2,9 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import CategoryHeader from '../../Components/Category/CategoryHeader'
 import CardProductsContainer from '../../Components/Products/CardProductsContainer'
-import Pagination from '../../Components/Uitily/Pagination'
-import SearchCountResult from '../../Components/Uitily/SearchCountResult'
-import SideFilter from '../../Components/Uitily/SideFilter'
+import Pagination from '../../Components/Utility/Pagination'
+import SearchCountResult from '../../Components/Utility/SearchCountResult'
+import SideFilter from '../../Components/Utility/SideFilter'
 import ViewSearchProductsHook from './../../hook/products/view-search-products-hook';
 
 const ShopProductsPage = () => {

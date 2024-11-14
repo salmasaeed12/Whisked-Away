@@ -4,13 +4,12 @@ import { createBrand } from '../../redux/actions/brandAction'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import notify from '../Alter.jsx'
-import { applayCoupnCart } from '../../redux/actions/cartAction';
+import { applyCouponCart } from '../../redux/actions/cartAction';
 import cartReducer from './../../redux/reducers/cartReducer';
 import GetAllUserCartHook from './get-all-user-cart-hook';
-const ApplayCouponHook = () => {
+const ApplyCouponHook = () => {
     const dispatch = useDispatch();
 
-   
     const [couponName, setCouponName] = useState('')
     const [loading, setLoading] = useState(true)
 
@@ -18,32 +17,32 @@ const ApplayCouponHook = () => {
         setCouponName(e)
     }
 
-    const handelSubmitCoupon = async () => {
+    const handleSubmitCoupon = async () => {
         if (couponName === "") {
-            notify("من فضلك ادخل الكوبون", "warn")
+            notify("Please enter the coupon", "warn")
             return
         }
         setLoading(true)
-        await dispatch(applayCoupnCart({
+        await dispatch(applyCouponCart({
             couponName: couponName
         }))
         setLoading(false)
     }
 
-    const res = useSelector(state => state.cartReducer.applayCoupon)
+    const res = useSelector(state => state.cartReducer.applyCoupon)
 
     useEffect(() => {
 
         if (loading === false) {
             console.log(res)
             if (res && res.status === 200) {
-                notify("تم تطبيق الكوبون بنجاح", "success")
+                notify("Coupon applied successfully", "success")
                 setTimeout(() => {
                     window.location.reload(false)
                 }, 1000);
 
             } else {
-                notify("هذا الكوبون غير صحيح او منتهى الصلاحيه", "warn")
+                notify("This coupon is invalid or expired", "warn")
                 setTimeout(() => {
                     window.location.reload(false)
                 }, 1000);
@@ -52,8 +51,8 @@ const ApplayCouponHook = () => {
     }, [loading])
 
 
-    return [couponName, onChangeCoupon, handelSubmitCoupon]
+    return [couponName, onChangeCoupon, handleSubmitCoupon]
 
 }
 
-export default ApplayCouponHook
+export default ApplyCouponHook

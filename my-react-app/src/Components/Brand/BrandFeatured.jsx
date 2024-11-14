@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Spinner, Row } from 'react-bootstrap'
-import SubTiltle from '../Uitily/SubTiltle'
+import SubTiltle from '../Utility/SubTiltle'
 import BrandCard from './BrandCard'
 import HomeBrandHook from '../../hook/brand/home-brand-hook'
 

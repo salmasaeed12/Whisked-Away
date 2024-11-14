@@ -37,7 +37,7 @@ const NavBarLogin = () => {
                     <FormControl
                         onChange={OnChangeSearch}
                         type="search"
-                        placeholder="ابحث..."
+                        placeholder="Search..."
                         className="me-2 w-100 text-center"
                         aria-label="Search"
                     />
@@ -45,22 +45,22 @@ const NavBarLogin = () => {
                         {user ? (
                             <NavDropdown title={user.name} id="basic-nav-dropdown">
                                 {user.role === "admin" ? (
-                                    <NavDropdown.Item href="/admin/all-products">لوحة التحكم</NavDropdown.Item>
+                                    <NavDropdown.Item href="/admin/all-products">Dashboard</NavDropdown.Item>
                                 ) : (
-                                    <NavDropdown.Item href="/user/profile">الصفحه الشخصية</NavDropdown.Item>
+                                    <NavDropdown.Item href="/user/profile">Profile</NavDropdown.Item>
                                 )}
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item onClick={logOut} href="/">تسجيل خروج</NavDropdown.Item>
+                                <NavDropdown.Item onClick={logOut} href="/">Logout</NavDropdown.Item>
                             </NavDropdown>
                         ) : (
                             <Nav.Link href='/login' className="nav-text d-flex mt-3 justify-content-center">
                                 <img src={loginIcon} className="login-img" alt="Login" />
-                                <p style={{ color: "white" }}>دخول</p>
+                                <p style={{ color: "white" }}>Login</p>
                             </Nav.Link>
                         )}
                         <Nav.Link href='/cart' className="nav-text position-relative d-flex mt-3 justify-content-center" style={{ color: "white" }}>
                             <img src={cartIcon} className="cart-img" alt="Cart" />
-                            <p style={{ color: "white" }}>العربه</p>
+                            <p style={{ color: "white" }}>Cart</p>
                             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 {itemsNum || 0}
                             </span>

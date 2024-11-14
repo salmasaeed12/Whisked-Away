@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Row } from 'react-bootstrap'
-import SubTiltle from '../Uitily/SubTiltle'
+import SubTiltle from '../Utility/SubTiltle'
 import ProductCard from './ProductCard'
 import { useDispatch, useSelector } from 'react-redux';
 import { getProductWishList } from '../../redux/actions/wishListAction';

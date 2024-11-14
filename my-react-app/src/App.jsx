@@ -1,26 +1,27 @@
 import React from 'react';
-import { ToastContainer } from 'react-toastify';
-import NavBarLogin from './Components/Uitily/NavBarLogin';
-import Footer from './Components/Uitily/Footer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import NavBarLogin from './Components/Utility/NavBarLogin';
+import Footer from './Components/Utility/Footer';
 import HomePage from './Page/Home/HomePage';
 import LoginPage from './Page/Auth/LoginPage';
 import RegisterPage from './Page/Auth/RegisterPage';
 import AllCategoryPage from './Page/Category/AllCategoryPage';
 import AllBrandPage from './Page/Brand/AllBrandPage';
 import ShopProductsPage from './Page/Products/ShopProductsPage';
-import ProductDetalisPage from './Page/Products/ProductDetalisPage';
+import ProductDetailsPage from './Page/Products/ProductDetailsPage';
 import CartPage from './Page/Cart/CartPage';
 import ChoosePayMethodPage from './Page/Checkout/ChoosePayMethodPage';
 import AdminAllProductsPage from './Page/Admin/AdminAllProductsPage';
 import AdminAllOrdersPage from './Page/Admin/AdminAllOrdersPage';
-import AdminOrderDetalisPage from './Page/Admin/AdminOrderDetailsPage';
+import AdminOrderDetailsPage from './Page/Admin/AdminOrderDetailsPage';
 import AdminAddBrandPage from './Page/Admin/AdminAddBrandPage';
 import AdminAddCategoryPage from './Page/Admin/AdminAddCategoryPage';
 import AdminAddSubCategoryPage from './Page/Admin/AdminAddSubCategoryPage';
 import AdminAddProductsPage from './Page/Admin/AdminAddProductsPage';
 import UserAllOrdersPage from './Page/User/UserAllOrdersPage';
 import UserFavoriteProductsPage from './Page/User/UserFavoriteProductsPage';
-import UserAllAddresPage from './Page/User/UserAllAddresPage';
+import UserAllAddressPage from './Page/User/UserAllAddressPage';
 import UserAddAddressPage from './Page/User/UserAddAddressPage';
 import UserEditAddressPage from './Page/User/UserEditAddressPage';
 import UserProfilePage from './Page/User/UserProfilePage';
@@ -31,6 +32,7 @@ import ResetPasswordPage from './Page/Auth/ResetPasswordPage';
 import AdminAddCouponPage from './Page/Admin/AdminAddCouponPage';
 import AdminEditCouponPage from './Page/Admin/AdminEditCouponPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

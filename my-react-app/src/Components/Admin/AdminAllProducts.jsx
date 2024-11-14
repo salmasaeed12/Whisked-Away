@@ -6,12 +6,12 @@ const AdminAllProducts = ({ products }) => {
    
     return (
         <div>
-            <div className='admin-content-text'>ادارة جميع المنتجات</div>
+            <div className='admin-content-text'>Manage All Products</div>
             <Row className='justify-content-start'>
                 {
                     products ? (
                         products.map((item, index) => <AdminAllProductsCard key={index} item={item} />)
-                    ) : <h4>لا يوجد منتجات حتي الان</h4>
+                    ) : <h4>No products available yet</h4>
                 }
 
             </Row>

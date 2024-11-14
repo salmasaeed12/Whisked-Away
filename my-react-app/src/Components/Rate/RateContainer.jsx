@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import rate from '../../images/rate.png'
-import Pagination from '../Uitily/Pagination';
+import Pagination from '../Utility/Pagination';
 import RateItem from './RateItem';
 import RatePost from './RatePost';
 import ViewAllReviewHook from './../../hook/review/view-all-review-hook';

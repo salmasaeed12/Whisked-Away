@@ -15,7 +15,7 @@ const AdminAllProductsCard = ({ item }) => {
 
     const handelDelete = async () => {
         // Dispatch the delete action
-        await dispatch(deleteProducts(item._id));
+        await dispatch(deleteProducts(item._id)); // Ensure deleteProducts returns a promise
         setShow(false); // Close the modal after deleting
         // You can dispatch an action to update the products list in the store instead of reloading the page
     }
@@ -24,15 +24,15 @@ const AdminAllProductsCard = ({ item }) => {
         <Col xs="12" sm="6" md="5" lg="4" className="d-flex">
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header>
-                    <Modal.Title><div className='font'>تاكيد الحذف</div></Modal.Title>
+                    <Modal.Title><div className='font'>Delete Confirmation</div></Modal.Title>
                 </Modal.Header>
-                <Modal.Body><div className='font'>هل انتا متاكد من عملية الحذف للمنتج</div></Modal.Body>
+                <Modal.Body><div className='font'>Are you sure you want to delete this product?</div></Modal.Body>
                 <Modal.Footer>
                     <Button className='font' variant="success" onClick={handleClose}>
-                        تراجع
+                        Cancel
                     </Button>
                     <Button className='font' variant="dark" onClick={handelDelete}>
-                        تأكيد الحذف
+                        Confirm Delete
                     </Button>
                 </Modal.Footer>
             </Modal>
@@ -48,9 +48,9 @@ const AdminAllProductsCard = ({ item }) => {
                 }}>
                 <Row className="d-flex justify-content-center px-2">
                     <Col className="d-flex justify-content-between">
-                        <div onClick={handleShow} className="d-inline item-delete-edit">ازاله</div>
-                        <Link to={`/admin/editproduct/${item._id}`} style={{ textDecoration: "none" }}>
-                            <div className="d-inline item-delete-edit">تعديل</div>
+                        <div onClick={handleShow} className="d-inline item-delete-edit">Remove</div>
+                        <Link to={`/admin/editProduct/${item._id}`} style={{ textDecoration: "none" }}>
+                            <div className="d-inline item-delete-edit">Edit</div>
                         </Link>
                     </Col>
                 </Row>
@@ -66,7 +66,7 @@ const AdminAllProductsCard = ({ item }) => {
                             <div className="d-flex justify-content-between">
                                 <div className="card-rate">{item.ratingsQuantity}</div>
                                 <div className="d-flex">
-                                    <div className="card-currency mx-1">جنيه</div>
+                                    <div className="card-currency mx-1">EGP</div>
                                     <div className="card-price">{item.price}</div>
                                 </div>
                             </div>
